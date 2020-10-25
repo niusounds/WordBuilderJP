@@ -1,16 +1,20 @@
-<section>
-  <h2>歌詞を入力</h2>
-  <ul>
-    <li>WordBuilderに貼り付ける前にVOTOXモードにしてください。</li>
-    <li>歌詞はひらがなで入力してください。</li>
-  </ul>
-  <textarea name="lyrics" id="lyrics" cols="50" rows="10" [(ngModel)]="lyrics"></textarea>
-</section>
-<section>
-  <h2>Word Builder</h2>
-  <textarea name="lyrics" id="lyrics" cols="50" rows="10" readonly>{{translate(lyrics)}}</textarea>
-</section>
-<section>
-  <button (click)="copy()">コピー</button>
-  <span *ngIf="copied">コピーしました。</span>
-</section>
+<div class="container nes-container">
+
+  <h1>WordBuilder JP</h1>
+
+  <section class="nes-container with-title">
+    <label class="title" for="lyrics">Enter lyrics in hiragana</label>
+    <textarea name="lyrics" id="lyrics" class="nes-textarea" [(ngModel)]="lyrics"></textarea>
+  </section>
+
+  <section class="nes-container with-title is-dark">
+    <label class="title" for="output">Word Builder VOTOX</label>
+    <textarea name="output" id="output" class="nes-textarea" readonly>{{translate(lyrics)}}</textarea>
+  </section>
+
+  <section>
+    <button class="nes-btn is-primary" (click)="copy()">Copy</button>
+    <span class="copied" *ngIf="copied">Copied to clipboard!</span>
+  </section>
+
+</div>

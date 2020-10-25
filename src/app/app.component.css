@@ -1,0 +1,13 @@
+div.container {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+section {
+    margin-top: 32px !important;
+}
+
+.copied {
+    margin-left: 16px;
+}
